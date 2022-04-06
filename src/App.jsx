@@ -1,9 +1,13 @@
 import { useState } from "react";
+import Styles from "./App.module.css";
+import Header from "./components/Header/Header";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className='App'>Hello Seniorita</div>;
+  return (
+    <div className={Styles.app}>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
