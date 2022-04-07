@@ -1,0 +1,7 @@
+.container{
+margin-top: 80vh;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.537);
+    border: solid 1px rgb(0, 0, 0);
+}
