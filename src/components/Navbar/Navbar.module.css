@@ -1,0 +1,18 @@
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    margin-top: 6vh;
+    height: 6vh;
+    box-shadow: 10px 10px 10px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.link{
+    color: white;
+    text-decoration: underline white;
+}
