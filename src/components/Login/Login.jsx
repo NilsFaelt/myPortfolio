@@ -5,7 +5,6 @@ const Login = () => {
   const [username, setusername] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({ name: null, password: null });
-  console.log(user);
 
   const onSubmit = (e) => {
     e.preventDefault();

@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import Styles from "./DoneProjects.module.css";
 
-const DoneProjects = () => {
+const DoneProjects = ({ setToogleProjectNav }) => {
+  useEffect(() => {
+    setToogleProjectNav(false);
+  }, []);
   return <div>DoneProjects</div>;
 };
 

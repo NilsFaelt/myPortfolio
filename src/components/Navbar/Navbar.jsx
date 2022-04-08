@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ACTIONS } from "../../redux/actionTypes";
+import store from "../../redux/store";
 import Styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ setToogleProjectNav, toogleProjectNav }) => {
+  const toogleNav = () => {
+    setToogleProjectNav(!toogleProjectNav);
+  };
   return (
     <nav className={Styles.container}>
       <Link className={Styles.link} to='/'>
@@ -11,14 +16,11 @@ const Navbar = () => {
       <Link className={Styles.link} to='/'>
         Tools
       </Link>
-      <Link className={Styles.link} to='/projectNav'>
+      <Link onClick={toogleNav} className={Styles.link} to='/projectNav'>
         Projects
       </Link>
       <Link className={Styles.link} to='/'>
         Contact
-      </Link>
-      <Link className={Styles.link} to='/followProject'>
-        Follow your project
       </Link>
     </nav>
   );
