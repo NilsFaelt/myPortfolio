@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "./Navbar.module.css";
 
@@ -10,7 +11,7 @@ const Navbar = () => {
       <Link className={Styles.link} to='/'>
         Tools
       </Link>
-      <Link className={Styles.link} to='/'>
+      <Link className={Styles.link} to='/projectNav'>
         Projects
       </Link>
       <Link className={Styles.link} to='/'>

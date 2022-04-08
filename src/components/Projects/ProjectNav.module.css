@@ -1,0 +1,21 @@
+.container{
+    margin-top: 2vh;
+    margin-left: 40vw;
+    width: 12vw;
+    height: 12vh;
+    background-color: rgba(0, 0, 0, 0.477);
+    border-radius: 5px;
+    border: solid black 1px;
+    box-shadow: 10px 10px 10px;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+.link{
+    margin-top: 1.5vh;
+    color: white;
+    text-decoration: 1px underline white;
+}
