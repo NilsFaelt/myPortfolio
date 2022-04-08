@@ -16,6 +16,9 @@ const Navbar = () => {
       <Link className={Styles.link} to='/'>
         Contact
       </Link>
+      <Link className={Styles.link} to='/followProject'>
+        Follow your project
+      </Link>
     </nav>
   );
 };

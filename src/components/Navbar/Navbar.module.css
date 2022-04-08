@@ -15,5 +15,6 @@
 }
 .link{
     color: white;
-    text-decoration: underline white;
+    text-decoration: 1px underline white;
 }
+
