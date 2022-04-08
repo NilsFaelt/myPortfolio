@@ -1,18 +1,43 @@
+import { useState } from "react";
 import Styles from "./Login.module.css";
 
 const Login = () => {
+  const [username, setusername] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({ name: null, password: null });
+  console.log(user);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setUser({ username: username, password: password });
+    setusername("");
+    setPassword("");
+  };
+
   return (
     <form className={Styles.container}>
       <h2 className={Styles.title}>Login</h2>
       <label className={Styles.label} htmlFor=''>
         Username:
       </label>
-      <input className={Styles.input} type='text' />
+      <input
+        onChange={(e) => setusername(e.target.value)}
+        className={Styles.input}
+        type='text'
+        value={username}
+      />
       <label className={Styles.label} htmlFor=''>
         Password:
       </label>
-      <input className={Styles.input} type='password' />
-      <button className={Styles.btn}>Login</button>
+      <input
+        onChange={(e) => setPassword(e.target.value)}
+        className={Styles.input}
+        type='password'
+        value={password}
+      />
+      <button onClick={onSubmit} className={Styles.btn}>
+        Login
+      </button>
     </form>
   );
 };
