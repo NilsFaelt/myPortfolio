@@ -27,7 +27,7 @@ function App() {
         toogleProjectNav={toogleProjectNav}
       />
       <Routes>
-        <Route path='/' element={<Contact />} />
+        <Route path='/contact' element={<Contact />} />
         {toogleProjectNav ? (
           <Route path='/projectNav' element={<ProjectNav />} />
         ) : null}
