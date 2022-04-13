@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Styles from "./Login.module.css";
 
 const Login = () => {
@@ -6,9 +6,15 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({ name: null, password: null });
 
+  useEffect(() => {
+    if (user.name === "admin" && user.password === "admin") {
+      alert("LOGGEDIN");
+    }
+  }, [user]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    setUser({ username: username, password: password });
+    setUser({ name: username, password: password });
     setusername("");
     setPassword("");
   };
