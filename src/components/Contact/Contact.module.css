@@ -37,9 +37,10 @@ input{
     box-shadow: 10px 10px 10px;
 }
 .btn{
+ 
     width: 10vw;
     align-self: center;
-    margin-top: 2vh;
+    margin-top: 4vh;
     cursor: pointer;
     box-shadow: 10px 10px 10px;
 }
