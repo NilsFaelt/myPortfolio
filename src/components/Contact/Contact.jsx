@@ -1,14 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Styles from "./Contact.module.css";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [mail, setMail] = useState("");
   const [textInput, setTextInput] = useState("");
+
   const onSubmit = (e) => {
     e.preventDefault();
     setTextInput("");
     setMail("");
+    navigate("/mailnotification");
   };
+
   console.log(mail);
   console.log(textInput);
 
@@ -21,7 +26,7 @@ const Contact = () => {
         </label>
         <input
           className={Styles.input}
-          type='text'
+          type='email'
           required
           onChange={(e) => setMail(e.target.value)}
           value={mail}
