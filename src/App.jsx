@@ -12,6 +12,7 @@ import DoneProjects from "./components/Projects/DoneProjects/DoneProjects";
 import ProjectNav from "./components/Projects/ProjectNav";
 import { useSelector } from "react-redux";
 import store from "./redux/store";
+import Mailnotification from "./components/MailNotification/Mailnotification";
 
 function App() {
   const [toogleProjectNav, setToogleProjectNav] = useState(false);
@@ -40,6 +41,7 @@ function App() {
           element={<DoneProjects setToogleProjectNav={setToogleProjectNav} />}
         />
         <Route path='/login' element={<Login />} />
+        <Route path='/mailnotification' element={<Mailnotification />} />
       </Routes>
 
       <Footer />
