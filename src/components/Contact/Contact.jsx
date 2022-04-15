@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ACTIONS } from "../../redux/actionTypes";
+import store from "../../redux/store";
 import Styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -9,6 +11,10 @@ const Contact = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    store.dispatch({
+      type: ACTIONS.GRAB_MAIL_ADRESS,
+      payload: { mail },
+    });
     setTextInput("");
     setMail("");
     navigate("/mailnotification");
