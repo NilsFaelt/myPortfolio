@@ -13,6 +13,7 @@ import ProjectNav from "./components/Projects/ProjectNav";
 import { useSelector } from "react-redux";
 import store from "./redux/store";
 import Mailnotification from "./components/MailNotification/Mailnotification";
+import Tools from "./components/Tools/Tools";
 
 function App() {
   const [toogleProjectNav, setToogleProjectNav] = useState(false);
@@ -28,6 +29,7 @@ function App() {
         toogleProjectNav={toogleProjectNav}
       />
       <Routes>
+        <Route path='/tools' element={<Tools />} />
         <Route path='/contact' element={<Contact />} />
         {toogleProjectNav ? (
           <Route path='/projectNav' element={<ProjectNav />} />

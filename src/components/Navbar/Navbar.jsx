@@ -13,7 +13,7 @@ const Navbar = ({ setToogleProjectNav, toogleProjectNav }) => {
       <Link className={Styles.link} to='/'>
         Home
       </Link>
-      <Link className={Styles.link} to='/'>
+      <Link className={Styles.link} to='/tools'>
         Tools
       </Link>
       <Link onClick={toogleNav} className={Styles.link} to='/projectNav'>
